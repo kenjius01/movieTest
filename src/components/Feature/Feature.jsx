@@ -25,8 +25,8 @@ const Feature = () => {
 
     useEffect(() => {
         getPopularMovie().then((res) => {
-            setHotMovie(res[19]);
-            getVideoTrailer(res[19].id).then((trailersRes) => {
+            setHotMovie(res[7]);
+            getVideoTrailer(res[7].id).then((trailersRes) => {
                 setTrailers(trailersRes);
             });
         });

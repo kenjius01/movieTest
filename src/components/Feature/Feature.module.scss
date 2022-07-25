@@ -82,12 +82,12 @@
 .trailer {
     width: 100%;
     // margin-top: 80px;
-    margin-bottom: 68px;
+    // margin-bottom: 68px;
     display: flex;
     flex-direction: column;
     gap: 13px;
     grid-column: col-start / -1;
-    grid-row: 5;
+    grid-row: 4;
 
     span {
         font-weight: 700;
