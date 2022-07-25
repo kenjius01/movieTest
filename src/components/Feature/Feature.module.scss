@@ -2,7 +2,7 @@
 
 .wrapper {
     width: 100%;
-    height: 1200px;
+    height: 924px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,8 @@
 
 .left {
     grid-column: col-start / span 6;
-    grid-row: 3;
+    position: absolute;
+    top: 416px;
 }
 
 .right {
@@ -52,7 +53,7 @@
 }
 
 .title {
-    margin-top: 194px;
+    margin-top: 118px + $header-height;
     font-weight: 700;
     font-size: 72px;
     line-height: 96px;
@@ -64,6 +65,10 @@
     line-height: 32px;
     margin-bottom: 8px;
     color: $primary-light;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .detail {
@@ -80,14 +85,14 @@
 }
 
 .trailer {
+    position: absolute;
     width: 100%;
-    // margin-top: 80px;
-    // margin-bottom: 68px;
+    bottom: 68px;
     display: flex;
     flex-direction: column;
     gap: 13px;
     grid-column: col-start / -1;
-    grid-row: 4;
+    grid-row: 5;
 
     span {
         font-weight: 700;
