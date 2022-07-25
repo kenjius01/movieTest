@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    background: $secondary-medium-gray;
+    height: 100%;
+    flex: 3;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 105px;
+    gap: 24px;
+    padding-top: 93px;
+    padding-right: 135px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 88px;
+}
+
+.desc {
+    width: 320px;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 8px;
+    color: $disable-color;
+}
+
+.join {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.mailInfo {
+    display: flex;
+    position: relative;
+    width: 282px;
+    input {
+        padding: 24.5px 16px;
+        width: 100%;
+        background: $primary-gold;
+        border-radius: 8px;
+        &::placeholder {
+            color: #9a9ab0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+    button {
+        position: absolute;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

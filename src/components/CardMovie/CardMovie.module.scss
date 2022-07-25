@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    cursor: pointer;
+    & > button {
+        position: absolute;
+        top: 24px;
+        left: 26px;
+        z-index: 4;
+    }
+}
+
+.coverImg {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+}
+
+.detail {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 24px;
+    left: 24px;
+    z-index: 4;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+}

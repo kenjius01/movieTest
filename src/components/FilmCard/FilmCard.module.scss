@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.card {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+.coverImg {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+}
+
+.info {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 16px;
+    bottom: 35px;
+    left: 41px;
+    z-index: 4;
+
+    .title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+    }
+
+    .desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $disable-color;
+        width: 466px;
+    }
+}

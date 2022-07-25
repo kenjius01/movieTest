@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 10px $bg-button solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 4;
+}
+
+.primary {
+    width: 100px;
+    height: 100px;
+
+    svg {
+        margin-left: 12px;
+    }
+}
+
+.small {
+    width: 33.33px;
+    height: 33.33px;
+    border: 3px $bg-button solid;
+
+    svg {
+        width: 15px;
+        height: 19px;
+    }
+}

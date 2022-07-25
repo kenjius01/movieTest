@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    height: $header-height;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: $bg-linear;
+    &.scrolled {
+        background: $primary-dark-gray;
+        box-shadow: 2px 2px 10px $primary-gold;
+    }
+}
+
+.inner {
+    height: 100%;
+    width: 1233px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 50.29px;
+    .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}

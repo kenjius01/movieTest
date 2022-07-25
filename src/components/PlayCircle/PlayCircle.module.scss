@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.circle {
+    position: absolute;
+    cursor: pointer;
+}
+
+.circleStart {
+    position: absolute;
+    width: 144px;
+    height: 144px;
+    border-radius: 100%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: $body-color $body-color $body-color $bg-button;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.circleEnd {
+    position: absolute;
+    width: 144px;
+    height: 144px;
+    border-radius: 100%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: $bg-button $bg-button $bg-button $body-color;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    div {
+        transform: rotate(230deg);
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        background-color: $bg-button;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

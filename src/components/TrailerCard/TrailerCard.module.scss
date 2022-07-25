@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.card {
+    position: relative;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        width: 296px;
+        height: 136px;
+        background: $primary-dark-gray;
+    }
+    span {
+        position: absolute;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+        bottom: -20px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: $text-color;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
