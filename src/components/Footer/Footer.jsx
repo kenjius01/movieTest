@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
     return (
-        <div className={styles.wrapper}>
+        <div id="footer" className={styles.wrapper}>
             <div className={styles.inner}>
                 <div className={styles.container}>
                     <FooterMailContact />

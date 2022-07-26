@@ -14,7 +14,7 @@ const ShowSection = () => {
             .catch((err) => console.log(err));
     }, []);
     return (
-        <div className={styles.wrapper}>
+        <div id="tvshow" className={styles.wrapper}>
             <div className={styles.inner}>
                 <Heading title="top TV show" />
                 <ListMovie items={listMovie} />

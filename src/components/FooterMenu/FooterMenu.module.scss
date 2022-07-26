@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .wrapper {
     height: 100%;
@@ -16,11 +17,20 @@
     gap: 99px;
     padding-top: 133px;
     padding-right: 115px;
+    @include Responsive(XL) {
+        gap: 40px;
+        padding: 40px;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .menuItem {
     display: flex;
     gap: 161px;
+    @include Responsive(XL) {
+        gap: 80px;
+    }
 }
 
 .listItem {
@@ -47,6 +57,10 @@
     display: flex;
     align-items: center;
     gap: 26px;
+    @include Responsive(XL) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .contactItem {

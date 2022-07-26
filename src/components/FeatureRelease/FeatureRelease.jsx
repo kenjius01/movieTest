@@ -9,9 +9,25 @@ const FeatureRelease = ({ items }) => {
         infinite: false,
         slidesToShow: 3.5,
         speed: 500,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2.5,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
-        <div className={`${styles.wrapper} release`}>
+        <div id="movie" className={`${styles.wrapper} release`}>
             <span className={styles.title}>New Releases {'>'}</span>
             <Slider {...settings}>
                 {items.map((item) => (

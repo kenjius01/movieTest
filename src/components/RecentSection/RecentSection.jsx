@@ -12,7 +12,7 @@ const RecentSection = () => {
         });
     }, []);
     return (
-        <div className={styles.wrapper}>
+        <div id="movie" className={styles.wrapper}>
             <div className={styles.inner}>
                 <Heading title="my last watch" />
                 <ListMovie items={listMovie} />

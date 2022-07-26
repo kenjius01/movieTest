@@ -21,7 +21,7 @@ const FilmSection = () => {
             .catch((err) => console.log(err));
     }, []);
     return (
-        <div className={styles.wrapper}>
+        <div id="video" className={styles.wrapper}>
             <div className={styles.inner}>
                 <div className={styles.container}>
                     <FilmCard item={film} />

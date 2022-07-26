@@ -14,7 +14,7 @@ const TopMovies = () => {
             .catch((err) => console.log(err));
     }, []);
     return (
-        <div className={styles.wrapper}>
+        <div id="show" className={styles.wrapper}>
             <div className={styles.inner}>
                 <Heading title="top movies" />
                 <ListMovie items={listMovie} />

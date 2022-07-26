@@ -17,10 +17,55 @@ const Feature = () => {
 
     const settings = {
         dots: false,
-        infinite: true,
-        speed: 1000,
+        infinite: false,
+        speed: 500,
         lazyLoad: true,
         slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 4,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3.5,
+                    // slidesToScroll: 3,
+                    // initialSlide: 3,
+                },
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    initialSlide: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2.5,
+                    initialSlide: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 890,
+                settings: {
+                    slidesToShow: 2,
+                    initialSlide: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    initialSlide: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     useEffect(() => {
@@ -44,7 +89,7 @@ const Feature = () => {
     }, [hotMovie]);
 
     return (
-        <div className={styles.wrapper}>
+        <div id="home" className={styles.wrapper}>
             <div className={styles.coverImg}>
                 {hotMovie?.backdrop_path ? (
                     <img

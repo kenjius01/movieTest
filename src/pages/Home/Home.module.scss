@@ -2,4 +2,5 @@
 
 .wrapper {
     @include font-family('DM Sans');
+    overflow: hidden;
 }

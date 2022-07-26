@@ -7,9 +7,29 @@ const FeatureTVShow = ({ items }) => {
         infinite: false,
         slidesToShow: 2.5,
         speed: 500,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
     return (
-        <div className={`${styles.wrapper} release`}>
+        <div id="tvshow" className={`${styles.wrapper} release`}>
             <span className={styles.title}>Featured TV shows {'>'}</span>
             <Slider {...settings}>
                 {items.map((item) => (

@@ -3,11 +3,13 @@ import Button from '../Button/Button';
 import SpecMovie from '../SpecMovie/SpecMovie';
 import { useState, useEffect } from 'react';
 import { genresData } from '../../data/Data';
+import { useNavigate } from 'react-router-dom';
 
 const CardMovie = ({
-    item: { poster_path, genre_ids, title, backdrop_path, name },
+    item: { poster_path, id, genre_ids, title, backdrop_path, name },
 }) => {
     const [genre, setGenre] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         genresData.map((item) => {
@@ -18,8 +20,18 @@ const CardMovie = ({
         });
     }, [genre_ids]);
 
+    const handleClick = () => {
+        navigate(
+            `/detail/${
+                title
+                    ? title.split(' ').join('-').toLowerCase()
+                    : name.split(' ').join('-').toLowerCase()
+            }-${id}`,
+        );
+    };
+
     return (
-        <div className={styles.wrapper}>
+        <div onClick={handleClick} className={styles.wrapper}>
             <Button primary>{genre}</Button>
             <div className={styles.coverImg}>
                 <img
