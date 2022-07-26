@@ -12,7 +12,7 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
         window.onscroll = () => {
-            setIsScrolled(window.pageYOffset <= 100 ? false : true);
+            setIsScrolled(window.pageYOffset === 0 ? false : true);
             return () => (window.onscroll = null);
         };
     }, []);

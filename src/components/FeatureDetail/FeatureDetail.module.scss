@@ -8,6 +8,6 @@
     overflow: hidden;
     justify-content: center;
     @include Responsive(MD) {
-        height: 700px;
+        height: 100vh;
     }
 }

@@ -10,7 +10,7 @@ const ListEpisode = ({ items }) => {
         slidesToShow: 3,
         slidesToScroll: 3,
         speed: 500,
-        arrows: false,
+        arrows: true,
         responsive: [
             // {
             //     breakpoint: 1400,

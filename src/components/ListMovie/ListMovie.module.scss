@@ -12,6 +12,9 @@
     @include Responsive(MD) {
         grid-template-rows: 560px 560px 560px 560px 560px;
     }
+    @include Responsive(SM) {
+        grid-template-rows: 300px 300px 300px 300px 300px;
+    }
 }
 
 .item {

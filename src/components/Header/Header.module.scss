@@ -33,12 +33,13 @@
     }
     @include Responsive(LG) {
         width: 100%;
+        padding: 0 50px;
     }
 }
 
 .navIcon {
     display: none;
-    margin-left: 10%;
+
     .detailIcon {
         width: 35px;
         height: 35px;
@@ -70,8 +71,8 @@
         height: 20px;
         cursor: pointer;
     }
-    @include Responsive(LG) {
-        margin-right: 20px;
+    @include Responsive(MD) {
+        gap: 16px;
     }
 }
 
@@ -84,13 +85,14 @@
     }
     @include Responsive(LG) {
         border-top: 1px $primary-light solid;
-        padding: 20px;
+        padding: 40px;
         flex-direction: column;
-        gap: 40px;
+        gap: 35px;
         width: 100%;
         position: absolute;
+        left: -500%;
         top: $header-height;
-        left: -110%;
+
         transition: all 0.5s ease;
     }
 }
@@ -98,8 +100,10 @@
 .active {
     background: $secondary-shadow-gold;
 
+    top: $header-height;
     left: 0;
     z-index: 999;
+    height: 100vh;
 }
 
 .item {
@@ -125,7 +129,7 @@
         }
     }
     @include Responsive(LG) {
-        text-align: center;
+        // text-align: center;
         &:hover {
             line-height: 32px;
         }

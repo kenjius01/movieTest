@@ -19,6 +19,15 @@
         top: 24px;
         left: 26px;
         z-index: 4;
+        @include Responsive(SM) {
+            left: 62%;
+        }
+    }
+    @include Responsive(MD) {
+        touch-action: none;
+        &:hover img {
+            transform: scale(1);
+        }
     }
 }
 
@@ -50,6 +59,9 @@
         object-fit: cover;
         transition: all 0.5s ease;
     }
+    @include Responsive(SM) {
+        width: 60%;
+    }
 }
 
 .detail {
@@ -60,13 +72,24 @@
     bottom: 24px;
     left: 24px;
     z-index: 4;
+    @include Responsive(SM) {
+        left: 62%;
+    }
 }
 
 .title {
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
     @include Responsive(MD) {
         @include font-text(500, 32px, 48px);
+    }
+    @include Responsive(SM) {
+        @include font-text(500, 20px, 32px);
     }
 }

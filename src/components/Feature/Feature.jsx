@@ -23,7 +23,7 @@ const Feature = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 4,
-        arrows: false,
+        // arrows: false,
         responsive: [
             {
                 breakpoint: 1400,
@@ -91,11 +91,11 @@ const Feature = () => {
     return (
         <div id="home" className={styles.wrapper}>
             <div className={styles.coverImg}>
-                {hotMovie?.backdrop_path ? (
+                {hotMovie?.poster_path ? (
                     <img
                         src={
                             'http://image.tmdb.org/t/p/original' +
-                            hotMovie?.backdrop_path
+                            hotMovie?.poster_path
                         }
                         alt=""
                     />
