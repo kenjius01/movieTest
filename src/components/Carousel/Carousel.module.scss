@@ -90,15 +90,15 @@
 .desc {
     @include font-text(400, 16px, 32px);
 
-    @include Responsive(MD) {
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+    // @include Responsive(MD) {
+    //     display: -webkit-box;
+    //     -webkit-line-clamp: 6;
+    //     -webkit-box-orient: vertical;
+    //     overflow: hidden;
+    // }
     @include Responsive(SM) {
         display: -webkit-box;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 8;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }

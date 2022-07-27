@@ -18,7 +18,14 @@ const FeatureRelease = ({ items }) => {
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

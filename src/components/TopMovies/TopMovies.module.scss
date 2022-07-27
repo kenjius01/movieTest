@@ -17,4 +17,11 @@
     width: 1233px;
     display: flex;
     flex-direction: column;
+    @include Responsive(XL) {
+        width: 1100px;
+    }
+    @include Responsive(LG) {
+        width: 100%;
+        padding: 0 50px;
+    }
 }

@@ -21,7 +21,7 @@ $linear-gradient: linear-gradient(
     height: 100%;
     text-transform: capitalize;
     background: $linear-gradient;
-    overflow: hidden;
+    // overflow: hidden;
 
     cursor: pointer;
     &:hover img {
@@ -30,6 +30,10 @@ $linear-gradient: linear-gradient(
     &:hover .watch {
         animation: grow 1s forwards;
         opacity: 1;
+    }
+    @include Responsive(MD) {
+        height: 400px;
+        width: 300px;
     }
 }
 
@@ -90,4 +94,8 @@ $linear-gradient: linear-gradient(
     @include font-text(500, 18px, 24px);
     height: 0;
     opacity: 0;
+    @include Responsive(MD) {
+        opacity: 1;
+        height: 24px;
+    }
 }
