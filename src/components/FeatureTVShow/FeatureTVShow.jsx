@@ -6,24 +6,29 @@ const FeatureTVShow = ({ items }) => {
     const settings = {
         infinite: false,
         slidesToShow: 2.5,
+        initialSlide: 2.5,
+
         speed: 500,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
+                    initialSlide: 2,
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1.5,
+                    initialSlide: 1,
                 },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
+                    initialSlide: 1,
                 },
             },
         ],

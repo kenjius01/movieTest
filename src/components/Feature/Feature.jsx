@@ -29,8 +29,8 @@ const Feature = () => {
                 breakpoint: 1400,
                 settings: {
                     slidesToShow: 3.5,
-                    // slidesToScroll: 3,
-                    // initialSlide: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 3,
                 },
             },
             {

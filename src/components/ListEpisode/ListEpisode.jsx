@@ -9,6 +9,7 @@ const ListEpisode = ({ items }) => {
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 3,
+        initialSlide: 3,
         speed: 500,
         arrows: true,
         responsive: [

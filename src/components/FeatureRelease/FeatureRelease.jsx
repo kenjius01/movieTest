@@ -8,6 +8,7 @@ const FeatureRelease = ({ items }) => {
     const settings = {
         infinite: false,
         slidesToShow: 3.5,
+        initialSlide: 3.5,
         speed: 500,
         responsive: [
             {
@@ -15,6 +16,7 @@ const FeatureRelease = ({ items }) => {
                 settings: {
                     slidesToShow: 2.5,
                     slidesToScroll: 2,
+                    initialSlide: 2,
                 },
             },
             {
@@ -22,6 +24,7 @@ const FeatureRelease = ({ items }) => {
                 settings: {
                     slidesToShow: 1.5,
                     slidesToScroll: 1,
+                    initialSlide: 1,
                 },
             },
             {
@@ -29,6 +32,7 @@ const FeatureRelease = ({ items }) => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    initialSlide: 1,
                 },
             },
         ],
