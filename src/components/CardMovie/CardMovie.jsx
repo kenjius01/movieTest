@@ -32,7 +32,7 @@ const CardMovie = ({
 
     return (
         <div onClick={handleClick} className={styles.wrapper}>
-            <Button primary>{genre}</Button>
+            <Button primary>{genre || 'None'}</Button>
             <div className={styles.coverImg}>
                 <img
                     src={

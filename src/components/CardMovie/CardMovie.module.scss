@@ -20,7 +20,7 @@
         left: 26px;
         z-index: 4;
         @include Responsive(SM) {
-            left: 54%;
+            left: 45%;
         }
     }
     @include Responsive(MD) {
@@ -60,7 +60,7 @@
         transition: all 0.5s ease;
     }
     @include Responsive(SM) {
-        width: 50%;
+        width: 40%;
     }
 }
 
@@ -73,7 +73,8 @@
     left: 24px;
     z-index: 4;
     @include Responsive(SM) {
-        left: 54%;
+        left: 45%;
+        flex-direction: column-reverse;
     }
 }
 
