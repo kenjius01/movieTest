@@ -1,0 +1,81 @@
+@use '../../scss/' as *;
+
+.wrapper {
+    height: 100%;
+    background: var(--title-color);
+    width: 100%;
+    flex: 5;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    gap: 99px;
+    padding-top: 133px;
+    padding-right: 115px;
+    @include Responsive(XL) {
+        gap: 40px;
+        padding: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.menuItem {
+    display: flex;
+    gap: 161px;
+    @include Responsive(XL) {
+        gap: 80px;
+    }
+}
+
+.listItem {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    cursor: pointer;
+    & > *:first-child {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: var(--disable-color);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    @include Responsive(XL) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        font-weight: bold;
+    }
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

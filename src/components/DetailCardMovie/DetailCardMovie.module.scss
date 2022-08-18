@@ -1,0 +1,94 @@
+@use '../../scss/' as *;
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    z-index: 4;
+
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    cursor: pointer;
+    & > button {
+        position: absolute;
+        top: 24px;
+        left: 26px;
+        z-index: 4;
+        @include Responsive(SM) {
+            left: 45%;
+        }
+    }
+    @include Responsive(MD) {
+        &:hover img {
+            transform: scale(1);
+        }
+    }
+}
+
+.coverImg {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+    @include Responsive(SM) {
+        width: 40%;
+    }
+}
+
+.detail {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 24px;
+    left: 24px;
+    z-index: 4;
+    @include Responsive(SM) {
+        left: 45%;
+        flex-direction: column-reverse;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include Responsive(MD) {
+        @include font-text(500, 32px, 48px);
+    }
+    @include Responsive(SM) {
+        @include font-text(500, 20px, 32px);
+    }
+}

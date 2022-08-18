@@ -1,0 +1,160 @@
+@use '../../scss' as *;
+
+.wrapper {
+    height: $header-height;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: $bg-linear;
+    @include font-family('DM Sans');
+    &.scrolled {
+        // background-color: rgb(0, 0, 0, 0.3);
+        // -webkit-backdrop-filter: blur(4px);
+        // backdrop-filter: blur(4px);
+        // box-shadow: 2px 2px 10px $primary-gold;
+    }
+}
+
+.inner {
+    height: 100%;
+    width: 1233px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include Responsive(XL) {
+        width: 1100px;
+    }
+    @include Responsive(LG) {
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+.navIcon {
+    display: none;
+
+    .detailIcon {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    @include Responsive(LG) {
+        display: block;
+    }
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+
+    @include Responsive(LG) {
+        flex-grow: 1;
+    }
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 50.29px;
+    .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    @include Responsive(MD) {
+        gap: 16px;
+    }
+}
+
+.listItem {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 48px;
+    @include Responsive(XL) {
+        gap: 20px;
+    }
+    @include Responsive(LG) {
+        border-top: 1px $primary-light solid;
+        padding: 40px;
+        flex-direction: column;
+        gap: 35px;
+        width: 100%;
+        position: absolute;
+        left: -500%;
+        top: $header-height;
+        z-index: 999;
+
+        transition: all 0.5s ease;
+    }
+}
+
+.active {
+    background-color: rgb(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+
+    top: $header-height;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+}
+
+.item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    text-transform: capitalize;
+    cursor: pointer;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: $bg-button;
+        transition: width 0.3s ease;
+    }
+
+    &:hover {
+        // font-weight: 700;
+        // line-height: 24px;
+        &::after {
+            width: 100%;
+        }
+    }
+    @include Responsive(LG) {
+        // text-align: center;
+        &:hover {
+            line-height: 32px;
+        }
+    }
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .userImg {
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+
+        img {
+            border-radius: 100%;
+        }
+    }
+    span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        @include Responsive(LG) {
+            display: none;
+        }
+    }
+}

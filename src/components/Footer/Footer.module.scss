@@ -1,0 +1,30 @@
+@use '../../scss/' as *;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $primary-dark-gray;
+    @include font-family('DM Sans');
+}
+
+// .inner {
+//     height: 100%;
+//     margin-top: 248px;
+//     width: 1232px;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.container {
+    width: 100%;
+    height: 560px;
+    margin-top: 248px;
+    display: flex;
+    @include Responsive(MD) {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
