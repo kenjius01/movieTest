@@ -99,16 +99,16 @@
 }
 
 .title {
-    @include font-text(700, 72px, 96px);
+    // @include font-text(700, 72px, 96px);
     @include Responsive(XS) {
         @include font-text(500, 40px, 62px);
     }
 }
 
 .desc {
-    @include font-text(400, 16px, 32px);
+    // @include font-text(400, 16px, 32px);
     margin-bottom: 8px;
-    color: $primary-light;
+    // color: $primary-light;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -119,7 +119,7 @@
 }
 
 .detail {
-    @include font-text(500, 16px, 24px);
+    // @include font-text(500, 16px, 24px);
     display: flex;
     flex-direction: column;
     @include Responsive(XS) {
@@ -137,10 +137,6 @@
     @include Responsive(MD) {
         width: 90%;
         left: 40px;
-    }
-    span {
-        @include font-text(700, 32px, 48px);
-        // padding-bottom: 32px;
     }
     @include Responsive(MD) {
         @include font-text(500, 20px, 18px);

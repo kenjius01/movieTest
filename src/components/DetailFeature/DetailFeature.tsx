@@ -7,6 +7,7 @@ import { MovieDetail, TrailerInfo } from '../../interface/interface';
 import ListTrailerMovie from '../ListTrailerMovie/ListTrailerMovie';
 import MovieModal from '../Modal/MovieModal';
 import PlayCircle from '../PlayCircle/PlayCircle';
+import Typography from '../Typography/Typography';
 import styles from './DetailFeature.module.scss';
 
 const DetailFeature = () => {
@@ -42,27 +43,41 @@ const DetailFeature = () => {
                         <PlayCircle onClick={() => setIsopen(true)} />
                     </div>
                     <div className={styles.right}>
-                        <span className={styles.title}>
+                        <Typography
+                            as="h1"
+                            fontWeight="bold"
+                            className={styles.title}
+                        >
                             {movieDetail?.title || movieDetail?.name}
-                        </span>
-                        <span className={styles.desc}>
+                        </Typography>
+                        <Typography
+                            as="subheading1"
+                            color="light"
+                            fontWeight="light"
+                            className={styles.desc}
+                        >
                             {movieDetail?.overview}
-                        </span>
+                        </Typography>
                         <div className={styles.detail}>
-                            <span>
-                                Genre : {movieDetail?.genres[0].name || 'None'}
-                            </span>
-                            <span>
+                            <Typography as="h6">
+                                Genre :{' '}
+                                {movieDetail?.genres.length
+                                    ? movieDetail?.genres[0].name
+                                    : 'None'}
+                            </Typography>
+                            <Typography as="h6">
                                 Duration :{' '}
                                 {movieDetail?.runtime
                                     ? `${movieDetail?.runtime} minutes`
                                     : '2 hr 45 mins'}
-                            </span>
-                            <span>Ratings : {movieDetail?.vote_average}</span>
+                            </Typography>
+                            <Typography as="h6">
+                                Ratings : {movieDetail?.vote_average}
+                            </Typography>
                         </div>
                     </div>
                     <div className={styles.listTrailer}>
-                        <span>Trailers</span>
+                        <Typography as="h4">Trailers</Typography>
                         <ListTrailerMovie listTrailer={listTrailer} />
                     </div>
                 </div>

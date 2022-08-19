@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getSimilar } from '../../api/movieApi';
 import DetailHeadingSection from '../DetailHeadingSection/DetailHeadingSection';
 import DetailMovieList from '../DetailMovieList/DetailMovieList';
+import Typography from '../Typography/Typography';
 
 import styles from './DetailRecentSection.module.scss';
 
@@ -25,7 +26,13 @@ const DetailRecentSection = () => {
         <div id="movie" className={styles.wrapper}>
             <div className={styles.inner}>
                 <DetailHeadingSection title="similar movie" />
-                <DetailMovieList items={listMovie} />
+                {listMovie.length ? (
+                    <DetailMovieList items={listMovie} />
+                ) : (
+                    <Typography color="error" as="h4">
+                        There is no similar movies !
+                    </Typography>
+                )}
             </div>
         </div>
     );

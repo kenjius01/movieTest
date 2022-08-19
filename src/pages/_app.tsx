@@ -1,4 +1,6 @@
 import '../styles/globals.scss';
+import '../styles/Typography.scss';
+
 import type { AppProps } from 'next/app';
 import Layout from '../components/Layout/Layout';
 import { useEffect, useState } from 'react';

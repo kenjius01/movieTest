@@ -1,0 +1,104 @@
+@use '../scss/' as *;
+
+.typography--base {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    color: $primary-text-white;
+}
+
+.typography--variant-h1 {
+    font-size: 72px;
+    line-height: 96px;
+}
+
+.typography--variant-h2 {
+    font-size: 64px;
+    line-height: 88px;
+}
+
+.typography--variant-h3 {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.typography--variant-h4 {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.typography--variant-h5 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.typography--variant-h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.typography--variant-li {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.typography--variant-subheading1 {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.typography--variant-subheading2 {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.typography--variant-subheading3 {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+// .body1 {
+//     font-size: 1rem;
+// }
+
+// .body1 {
+//     font-size: 0.875rem;
+// }
+
+.typography--color-gold {
+    color: $primary-gold;
+}
+
+.typography--color-light {
+    color: $primary-light;
+}
+
+.typography--color-title {
+    color: $title-color;
+}
+
+.typography--color-body {
+    color: $body-color;
+}
+
+.typography--color-text {
+    color: $text-color;
+}
+
+.typography--color-disable {
+    color: $disable-color;
+}
+.typography--color-placeholder {
+    color: $placeholder-color;
+}
+
+.typography--color-error {
+    color: #eb5757;
+}
+
+.typography--fontWeight-bold {
+    font-weight: 700;
+}
+
+.typography--fontWeight-light {
+    font-weight: 400;
+}

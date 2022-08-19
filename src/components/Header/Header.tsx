@@ -6,6 +6,7 @@ import { FaTimes } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 import Image from 'next/image';
 import Logo from '../Logo/Logo';
+import Typography from '../Typography/Typography';
 
 const Header = () => {
     const [click, setClick] = useState<boolean>(false);
@@ -37,55 +38,34 @@ const Header = () => {
                 </div>
                 <div className={styles.left}>
                     <Logo title="Watchflix" />
-                    <ul
+                    <div
                         className={clsx(
                             styles.listItem,
                             click && styles.active,
                         )}
                     >
-                        <li
-                            className={styles.item}
-                            onClick={() => setClick(false)}
-                        >
+                        <Typography as="li" onClick={() => setClick(false)}>
                             Home
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             Movies
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             tV show
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             video
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             faq
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             pricing
-                        </li>
-                        <li
-                            onClick={() => setClick(false)}
-                            className={styles.item}
-                        >
+                        </Typography>
+                        <Typography as="li" onClick={() => setClick(false)}>
                             contact us
-                        </li>
-                    </ul>
+                        </Typography>
+                    </div>
                 </div>
                 <div className={styles.right}>
                     <FiSearch className={styles.icon} />
@@ -98,7 +78,9 @@ const Header = () => {
                                 alt=""
                             />
                         </div>
-                        <span>John Wick</span>
+                        <Typography as="h6" fontWeight="bold">
+                            John Wick
+                        </Typography>
                     </div>
                 </div>
             </div>
