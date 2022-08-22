@@ -7,6 +7,7 @@ import { MovieInfo, TvInfo } from '../../interface/interface';
 import { Image } from 'antd';
 import apiConfig from '../../api/apiConfig';
 import { useRouter } from 'next/router';
+import Typography from '../Typography/Typography';
 
 const DetailCardMovie = ({ data }: { data: MovieInfo & TvInfo }) => {
     const [genre, setGenre] = useState('');
@@ -44,9 +45,9 @@ const DetailCardMovie = ({ data }: { data: MovieInfo & TvInfo }) => {
             </div>
             <div className={styles.detail}>
                 <SpecMovie />
-                <span className={styles.title}>
+                <Typography fontWeight="bold" as="h3" className={styles.title}>
                     {data.title ? data.title : data.name}
-                </span>
+                </Typography>
             </div>
         </div>
     );

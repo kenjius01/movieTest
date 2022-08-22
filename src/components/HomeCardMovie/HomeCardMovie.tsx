@@ -8,6 +8,7 @@ import Image from 'next/image';
 import apiConfig from '../../api/apiConfig';
 import { useRouter } from 'next/router';
 import { Rate } from 'antd';
+import Typography from '../Typography/Typography';
 
 type InfoCard = MovieInfo & TvInfo;
 
@@ -49,10 +50,12 @@ const HomeCardMovie = ({
                     disabled
                     defaultValue={Math.round(movie.vote_average / 2)}
                 />
-                <span className={styles.title}>
+                <Typography as="h5" className={styles.title}>
                     {movie.title || movie.name}
-                </span>
-                <span className={styles.watch}>Watch now {' >'}</span>
+                </Typography>
+                <Typography as="h6" className={styles.watch}>
+                    Watch now {' >'}
+                </Typography>
             </div>
         </div>
     );

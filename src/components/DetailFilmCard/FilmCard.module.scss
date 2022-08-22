@@ -51,16 +51,14 @@
     z-index: 4;
 
     .title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
+        @include Responsive(MD) {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 48px;
+        }
     }
 
     .desc {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 32px;
-        color: $disable-color;
         width: 466px;
         @include Responsive(MD) {
             width: 100%;

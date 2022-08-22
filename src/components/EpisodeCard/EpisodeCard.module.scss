@@ -28,17 +28,7 @@
     width: 224px;
 }
 
-.episode {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: $primary-light;
-}
-
 .title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -47,11 +37,6 @@
 }
 
 .desc {
-    // padding-bottom: 6px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
-    color: #e6e6e6;
     width: 170px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -75,13 +60,6 @@
     display: flex;
     align-items: center;
     gap: 9px;
-
-    span {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 24px;
-        color: $text-color;
-    }
 }
 
 .icon {

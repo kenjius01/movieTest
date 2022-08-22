@@ -10,18 +10,12 @@
 }
 
 .title {
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 64px;
     @include Responsive(MD) {
         @include font-text(500, 30px, 48px);
     }
 }
 
 .btn {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
     cursor: pointer;
     color: $bg-button;
     @include Responsive(MD) {
